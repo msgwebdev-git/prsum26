@@ -3,6 +3,7 @@ import { Onest } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { headers } from "next/headers";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -98,6 +99,11 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   setRequestLocale(locale);
+
+  // Reading headers() forces dynamic rendering — required for per-request nonce.
+  // Next.js reads the nonce from the CSP header and applies it to its own
+  // inline <script> tags automatically.
+  await headers();
 
   return (
     <html lang={locale}>
