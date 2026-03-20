@@ -5,7 +5,7 @@ export default function AboutSection() {
   const t = useTranslations("About");
 
   return (
-    <section id="about" className="relative bg-white py-20 sm:py-28">
+    <section id="about" className="relative bg-white py-20 sm:py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left — Title & accent */}

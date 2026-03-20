@@ -118,8 +118,10 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden fixed inset-0 top-[56px] z-40 bg-white transition-transform duration-300 ${
-          mobileOpen ? "translate-x-0" : "translate-x-full"
+        className={`lg:hidden fixed inset-0 top-[56px] z-40 bg-white transition-all duration-300 ${
+          mobileOpen
+            ? "opacity-100 visible translate-x-0"
+            : "opacity-0 invisible translate-x-0"
         }`}
       >
         <ul className="flex flex-col px-6 pt-6">

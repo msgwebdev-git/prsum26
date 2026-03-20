@@ -74,21 +74,23 @@ function DrawnPath({
 }
 
 export default function SplashScreen() {
-  const [show, setShow] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return !sessionStorage.getItem("splash-shown");
-  });
+  const [show, setShow] = useState(true);
   const [exiting, setExiting] = useState(false);
   const [target, setTarget] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    // Skip splash if already shown this session
+    if (sessionStorage.getItem("splash-shown")) {
+      setShow(false);
+      return;
+    }
+
     // Find navbar logo position
     const logo = document.getElementById("navbar-logo");
     if (logo) {
       const rect = logo.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
       const centerY = rect.top + rect.height / 2;
-      // Offset from viewport center
       setTarget({
         x: centerX - window.innerWidth / 2,
         y: centerY - window.innerHeight / 2,

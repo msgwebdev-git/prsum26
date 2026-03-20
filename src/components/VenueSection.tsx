@@ -6,7 +6,7 @@ export default function VenueSection() {
   const t = useTranslations("Venue");
 
   return (
-    <section id="venue" className="relative bg-white py-20 sm:py-28">
+    <section id="venue" className="relative bg-white py-20 sm:py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left — Image */}
