@@ -1,0 +1,216 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+
+const whiteArc =
+  "M119.53 305.76C89.1199 305.76 63.5399 298.21 43.2999 283.22C19.7599 265.79 5.1299 239 0.999897 205.75C-3.2601 171.46 6.2099 133.23 27.6599 98.1C49.5299 62.29 82.4099 32.59 120.24 14.48C156.09 -2.67999 192.63 -4.68999 220.49 8.98001C241.03 19.05 255.03 37.08 259.91 59.74C264.19 79.58 258.83 100.62 245.22 117.48C226.39 140.8 194.6 153.65 155.71 153.65V123.9C195.82 123.9 214.51 108.17 222.08 98.79C230.02 88.96 233.21 77.01 230.84 66C227.87 52.23 219.76 41.74 207.4 35.68C188.05 26.19 160.27 28.29 133.09 41.3C100.39 56.95 71.9599 82.63 53.0499 113.6C35.0899 143.01 27.0899 174.43 30.5199 202.08C33.6199 227.05 44.1599 246.84 61.0099 259.31C79.5799 273.06 105.29 278.36 137.42 275.05C144.5 274.32 181.96 269.28 224.45 241.63C273.55 209.68 309.02 160.96 329.89 96.83L358.18 106.04C345.73 144.3 328.12 178.13 305.83 206.62C287.25 230.36 265.34 250.53 240.68 266.57C192.46 297.95 148.75 303.8 140.48 304.65C133.27 305.39 126.28 305.76 119.54 305.76H119.53Z";
+
+const yellowRibbon =
+  "M306.28 302.17L289.65 277.5C289.65 277.5 311.91 262.14 335.85 228.89C357.91 198.25 386.17 145.5 395.57 68.23L425.1 71.82C414.84 156.17 383.5 213.98 359.02 247.61C332.08 284.61 307.32 301.47 306.28 302.17Z";
+
+const redShape =
+  "M425.1 71.82C425.1 71.82 425.08 71.82 425.07 71.87C419.72 115.72 408.68 152.4 395.87 182.23C396.05 221.75 395.87 257 395.87 258.15H410.71H425.19C425.19 255.8 425.13 79.33 425.1 71.82Z";
+
+const blueShape =
+  "M335.85 228.89C340.75 222.08 345.95 214.23 351.19 205.21C358.42 173.68 360.88 140.06 358.17 106.04C358.16 106.08 358.16 106.01 358.15 106.05C349.81 131.65 339.07 155.41 326.25 176.77C320.75 213.73 308.32 248.21 289.66 277.5C289.66 277.5 289.63 277.47 289.68 277.5C291.35 276.33 312.76 260.97 335.85 228.88V228.89Z";
+
+const stars = [
+  "M165.31 86.22L172.37 81.08H163.65L160.95 72.73L158.25 81.08H149.53L156.59 86.22L153.9 94.54L160.95 89.39L168 94.54L165.31 86.22Z",
+  "M201.509 95.95L208.559 90.81H199.839L197.149 82.47L194.429 90.81H185.729L192.789 95.95L190.089 104.29L197.149 99.14L204.179 104.29L201.509 95.95Z",
+  "M227.999 122.61L235.039 117.46H226.339L223.629 109.12L220.929 117.46H212.209L219.259 122.61L216.589 130.94L223.629 125.79L230.669 130.94L227.999 122.61Z",
+  "M237.68 159L244.72 153.85H236.02L233.31 145.51L230.62 153.85H221.9L228.94 159L226.27 167.35L233.31 162.19L240.37 167.35L237.68 159Z",
+  "M227.969 195.38L235.019 190.25H226.309L223.609 181.9L220.909 190.25H212.189L219.249 195.38L216.569 203.71L223.609 198.57L230.659 203.71L227.969 195.38Z",
+  "M201.48 222.01L208.53 216.86H199.82L197.12 208.54L194.42 216.86H185.7L192.76 222.01L190.07 230.35L197.12 225.19L204.17 230.35L201.48 222.01Z",
+  "M165.31 231.74L172.37 226.6H163.65L160.95 218.25L158.25 226.6H149.53L156.59 231.74L153.9 240.09L160.95 234.93L168 240.09L165.31 231.74Z",
+  "M129.13 222.01L136.19 216.86H127.48L124.78 208.54L122.08 216.86H113.37L120.41 222.01L117.72 230.35L124.78 225.19L131.82 230.35L129.13 222.01Z",
+  "M102.65 195.38L109.7 190.24H100.99L98.2796 181.89L95.5896 190.24H86.8696L93.9296 195.38L91.2396 203.71L98.2796 198.57L105.34 203.71L102.65 195.38Z",
+  "M92.9597 159L100.02 153.86H91.2997L88.6097 145.51L85.8997 153.86H77.1797L84.2397 159L81.5497 167.35L88.6097 162.18L95.6497 167.35L92.9597 159Z",
+  "M102.63 122.61L109.7 117.47H100.98L98.2796 109.13L95.5696 117.47H86.8496L93.9096 122.61L91.2196 130.94L98.2796 125.79L105.32 130.94L102.63 122.61Z",
+  "M129.11 95.95L136.18 90.81H127.46L124.76 82.47L122.06 90.81H113.34L120.4 95.95L117.72 104.29L124.76 99.14L131.81 104.29L129.11 95.95Z",
+];
+
+// Draw stroke then fill
+function DrawnPath({
+  d,
+  strokeColor,
+  fillColor,
+  strokeDelay,
+  fillDelay,
+  strokeDuration,
+}: {
+  d: string;
+  strokeColor: string;
+  fillColor: string;
+  strokeDelay: number;
+  fillDelay: number;
+  strokeDuration: number;
+}) {
+  return (
+    <>
+      {/* Stroke drawing */}
+      <motion.path
+        d={d}
+        fill="none"
+        stroke={strokeColor}
+        strokeWidth={2}
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: 1, opacity: 1 }}
+        transition={{
+          pathLength: { duration: strokeDuration, delay: strokeDelay, ease: "easeInOut" },
+          opacity: { duration: 0.1, delay: strokeDelay },
+        }}
+      />
+      {/* Fill fading in */}
+      <motion.path
+        d={d}
+        fill={fillColor}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: fillDelay, ease: "easeOut" }}
+      />
+    </>
+  );
+}
+
+export default function SplashScreen() {
+  const [show, setShow] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return !sessionStorage.getItem("splash-shown");
+  });
+  const [exiting, setExiting] = useState(false);
+  const [target, setTarget] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    // Find navbar logo position
+    const logo = document.getElementById("navbar-logo");
+    if (logo) {
+      const rect = logo.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      // Offset from viewport center
+      setTarget({
+        x: centerX - window.innerWidth / 2,
+        y: centerY - window.innerHeight / 2,
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!show) return;
+    sessionStorage.setItem("splash-shown", "1");
+    const exitTimer = setTimeout(() => setExiting(true), 3200);
+    const hideTimer = setTimeout(() => setShow(false), 4200);
+    return () => {
+      clearTimeout(exitTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = show ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [show]);
+
+  if (!show) return null;
+
+  return (
+    <div className="fixed inset-0 z-[9999]">
+      {/* Background curtain — slides up */}
+      <motion.div
+        className="absolute inset-0 bg-[#034693]"
+        animate={exiting ? { y: "-100%" } : { y: 0 }}
+        transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+      />
+
+      {/* SVG Symbol — shrinks and flies to navbar logo */}
+      <motion.div
+        className="absolute inset-0 flex items-center justify-center"
+        animate={
+          exiting
+            ? {
+                x: target.x,
+                y: target.y,
+                scale: 0.08,
+                opacity: 0,
+              }
+            : { x: 0, y: 0, scale: 1, opacity: 1 }
+        }
+        transition={{
+          duration: 0.7,
+          ease: [0.76, 0, 0.24, 1],
+        }}
+      >
+        <svg
+          width="426"
+          height="306"
+          viewBox="0 0 426 306"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-[55vw] sm:w-[35vw] lg:w-[22vw] max-w-[380px] h-auto"
+        >
+          {/* 1. White arc */}
+          <DrawnPath
+            d={whiteArc}
+            strokeColor="rgba(255,255,255,0.6)"
+            fillColor="white"
+            strokeDelay={0.3}
+            fillDelay={1.3}
+            strokeDuration={1.2}
+          />
+
+          {/* 2. Yellow ribbon */}
+          <DrawnPath
+            d={yellowRibbon}
+            strokeColor="rgba(255,202,5,0.6)"
+            fillColor="#FFCA05"
+            strokeDelay={1.0}
+            fillDelay={1.6}
+            strokeDuration={0.7}
+          />
+
+          {/* 3. Red shape */}
+          <DrawnPath
+            d={redShape}
+            strokeColor="rgba(237,66,36,0.6)"
+            fillColor="#ED4224"
+            strokeDelay={1.3}
+            fillDelay={1.8}
+            strokeDuration={0.5}
+          />
+
+          {/* 4. Blue shape */}
+          <DrawnPath
+            d={blueShape}
+            strokeColor="rgba(16,117,187,0.6)"
+            fillColor="#1075BB"
+            strokeDelay={1.5}
+            fillDelay={2.0}
+            strokeDuration={0.5}
+          />
+
+          {/* 5. Stars */}
+          {stars.map((d, i) => (
+            <motion.path
+              key={i}
+              d={d}
+              fill="#FFCA05"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 2.2 + i * 0.06,
+                type: "spring",
+                stiffness: 500,
+                damping: 18,
+              }}
+              style={{ transformOrigin: "center" }}
+            />
+          ))}
+        </svg>
+      </motion.div>
+    </div>
+  );
+}

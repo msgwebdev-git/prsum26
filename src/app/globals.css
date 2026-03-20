@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --deep-blue: #034693;
+  --light-blue: #44ADE2;
+  --medium-blue: #1075BB;
+  --warm-yellow: #FFCA05;
+  --vibrant-orange: #ED4224;
+  --dark-red: #BB2A26;
+  --light-gray: #C8C8C8;
+  --medium-gray: #A0A0A0;
+  --dark-gray: #6E6E6E;
+}
+
+@theme inline {
+  --color-deep-blue: var(--deep-blue);
+  --color-light-blue: var(--light-blue);
+  --color-medium-blue: var(--medium-blue);
+  --color-warm-yellow: var(--warm-yellow);
+  --color-vibrant-orange: var(--vibrant-orange);
+  --color-dark-red: var(--dark-red);
+  --color-light-gray: var(--light-gray);
+  --color-medium-gray: var(--medium-gray);
+  --color-dark-gray: var(--dark-gray);
+  --font-onest: var(--font-onest);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float-slow 8s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.8s ease-out both;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.02); }
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(3deg); }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+body {
+  font-family: var(--font-onest), sans-serif;
+}
+
+button, [role="button"], a {
+  cursor: pointer;
+}

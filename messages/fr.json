@@ -1,0 +1,268 @@
+{
+  "Navbar": {
+    "about": "À propos",
+    "priorities": "Priorités",
+    "participants": "Participants",
+    "venue": "Lieu",
+    "explore": "Explorer la Moldova",
+    "accreditation": "Accréditation"
+  },
+  "Hero": {
+    "date": "14 – 15 mai 2026",
+    "location": "Chișinău, République de Moldova",
+    "title": "Présidence de la République de Moldova du Conseil de l'Europe",
+    "description": "La 135e Session du Comité des Ministres se tiendra les 14 et 15 mai 2026 au Palatul Republicii à Chișinău, marquant la conclusion de la Présidence moldave et la passation à Monaco.",
+    "accreditation": "Accréditation"
+  },
+  "About": {
+    "badge": "À propos de la Session",
+    "title": "La 135e Session du Comité des Ministres",
+    "intro": "La Session réunira les Ministres des Affaires étrangères et d'autres représentants de haut rang des États membres pour fournir une orientation politique et une direction stratégique à l'Organisation.",
+    "paragraph1": "En tant qu'organe de décision du Conseil de l'Europe, le Comité des Ministres est chargé de définir les priorités, d'adopter des décisions et des recommandations, de superviser l'exécution des arrêts de la Cour européenne des droits de l'homme et d'assurer la mise en œuvre effective des normes et engagements de l'Organisation dans l'ensemble de ses États membres.",
+    "paragraph2": "La réunion offrira l'occasion d'évaluer les progrès accomplis dans la promotion des droits de l'homme, de la démocratie et de l'état de droit, tout en abordant les défis émergents auxquels le continent européen est confronté.",
+    "highlight": "La 135e Session marquera également la conclusion de la Présidence de la République de Moldova du Comité des Ministres. Ce moment sera l'occasion de réfléchir aux priorités avancées durant la Présidence et d'assurer la continuité de l'action, alors que la Présidence est officiellement transmise à Monaco."
+  },
+  "Participants": {
+    "badge": "Participants",
+    "title": "États participants",
+    "description": "Les invitations à la 135e Session du Comité des Ministres du Conseil de l'Europe ont été adressées aux représentants des 46 États membres du Conseil de l'Europe, ainsi qu'aux États observateurs du Conseil de l'Europe.",
+    "memberStates": "États membres du Conseil de l'Europe",
+    "observerStates": "États observateurs",
+    "countries": {
+      "albania": "Albanie",
+      "andorra": "Andorre",
+      "armenia": "Arménie",
+      "austria": "Autriche",
+      "azerbaijan": "Azerbaïdjan",
+      "belgium": "Belgique",
+      "bosniaHerzegovina": "Bosnie-Herzégovine",
+      "bulgaria": "Bulgarie",
+      "croatia": "Croatie",
+      "cyprus": "Chypre",
+      "czechia": "Tchéquie",
+      "denmark": "Danemark",
+      "estonia": "Estonie",
+      "finland": "Finlande",
+      "france": "France",
+      "georgia": "Géorgie",
+      "germany": "Allemagne",
+      "greece": "Grèce",
+      "hungary": "Hongrie",
+      "iceland": "Islande",
+      "ireland": "Irlande",
+      "italy": "Italie",
+      "latvia": "Lettonie",
+      "liechtenstein": "Liechtenstein",
+      "lithuania": "Lituanie",
+      "luxembourg": "Luxembourg",
+      "malta": "Malte",
+      "moldova": "République de Moldova",
+      "monaco": "Monaco",
+      "montenegro": "Monténégro",
+      "netherlands": "Pays-Bas",
+      "northMacedonia": "Macédoine du Nord",
+      "norway": "Norvège",
+      "poland": "Pologne",
+      "portugal": "Portugal",
+      "romania": "Roumanie",
+      "sanMarino": "Saint-Marin",
+      "serbia": "Serbie",
+      "slovakia": "République slovaque",
+      "slovenia": "Slovénie",
+      "spain": "Espagne",
+      "sweden": "Suède",
+      "switzerland": "Suisse",
+      "turkiye": "Türkiye",
+      "ukraine": "Ukraine",
+      "unitedKingdom": "Royaume-Uni",
+      "canada": "Canada",
+      "holySee": "Saint-Siège",
+      "japan": "Japon",
+      "mexico": "Mexique",
+      "unitedStates": "États-Unis"
+    }
+  },
+  "Venue": {
+    "badge": "Lieu",
+    "title": "Palatul Republicii",
+    "description": "Le Palais de la République est un bâtiment situé au centre-ville de Chișinău. Inauguré en 1984, il possède une valeur architecturale unique et figure dans les registres internationaux qui répertorient les bâtiments les plus somptueux du monde.",
+    "addressLabel": "Adresse",
+    "address": "Rue Maria Cebotari 16, Chișinău, République de Moldova"
+  },
+  "Priorities": {
+    "badge": "Priorités",
+    "title": "Priorités de la Présidence",
+    "subtitle": "La République de Moldova a rejoint le Conseil de l'Europe le 13 juillet 1995. Assumer pour la deuxième fois la présidence du Comité des Ministres, l'année de son 30e anniversaire d'adhésion, est à la fois hautement symbolique et d'une importance capitale.",
+    "intro1": "En 30 ans d'adhésion au Conseil de l'Europe, notre démocratie s'est consolidée, l'état de droit a été réformé, la protection des droits de l'homme améliorée et étendue, et l'espace civique renforcé. Le Conseil de l'Europe a été un partenaire sincère et de confiance pour la République de Moldova.",
+    "intro2": "Les nouvelles réalités dans lesquelles nous opérons rendent notre Organisation encore plus significative, soulignent le besoin d'une responsabilité et d'un engagement renouvelés pour ses valeurs fondamentales, et appellent à des actions résolues pour renforcer notre réponse collective.",
+    "motto": "Pour une Europe de paix et de résilience",
+    "priorities": {
+      "ukraine": {
+        "title": "Soutien à l'Ukraine",
+        "description": "La Présidence facilitera le soutien du Conseil de l'Europe à l'Ukraine par le renforcement des capacités, le suivi et les initiatives de coopération, ainsi que le renforcement de ses mécanismes pour assurer la responsabilité, y compris l'opérationnalisation du Tribunal spécial et la mise en place de la Commission des réclamations."
+      },
+      "democracy": {
+        "title": "Nouveau Pacte démocratique pour l'Europe",
+        "description": "La Présidence moldave soutiendra le processus du Conseil de l'Europe vers un nouveau Pacte démocratique pour l'Europe. La démocratie est un processus, pas une destination — la préserver et la défendre exige un engagement sincère, des actions cohérentes et de l'innovation."
+      },
+      "disinformation": {
+        "title": "Lutte contre la désinformation",
+        "description": "Renforcer notre réponse à la désinformation, y compris la manipulation et l'ingérence informationnelles étrangères, pour défendre la liberté, faire respecter l'état de droit et protéger les droits fondamentaux à travers l'Europe."
+      }
+    },
+    "learnMore": "En savoir plus sur les priorités"
+  },
+  "Footer": {
+    "description": "Présidence de la République de Moldova du Comité des Ministres du Conseil de l'Europe. 14–15 mai 2026, Chișinău.",
+    "quickLinks": "Liens rapides",
+    "resources": "Ressources",
+    "contact": "Contact",
+    "links": {
+      "about": "À propos de la Session",
+      "priorities": "Priorités",
+      "participants": "Participants",
+      "venue": "Lieu"
+    },
+    "copyright": "Présidence de la République de Moldova du Conseil de l'Europe. Tous droits réservés."
+  },
+  "Explore": {
+    "hero": {
+      "badge": "Explorer la Moldova",
+      "title": "Découvrez la République de Moldova",
+      "subtitle": "Un pays de vignobles vallonnés, de traditions riches et d'hospitalité chaleureuse — votre guide pour découvrir la Moldova lors de la 135e Session.",
+      "videoCredit": "Vidéo fournie par",
+      "explorMore": "Découvrir la Moldova"
+    },
+    "about": {
+      "title": "À propos de la Moldova",
+      "description": "Nichée entre la Roumanie et l'Ukraine, la République de Moldova est un joyau caché de l'Europe de l'Est — un pays de paysages verdoyants, de traditions viticoles séculaires et d'un patrimoine culturel vibrant.",
+      "facts": {
+        "capital": {
+          "label": "Capitale",
+          "value": "Chișinău — une ville verte et agréable à parcourir, avec ses boulevards bordés d'arbres et son mélange d'architecture soviétique et moderne."
+        },
+        "population": {
+          "label": "Population",
+          "value": "Environ 2,6 millions d'habitants, connus pour leur chaleur et leur hospitalité."
+        },
+        "language": {
+          "label": "Langue",
+          "value": "Roumain (officielle). Le russe et l'anglais sont largement parlés à Chișinău."
+        },
+        "currency": {
+          "label": "Monnaie",
+          "value": "Leu moldave (MDL). Les cartes de crédit sont acceptées. Les distributeurs sont disponibles partout."
+        },
+        "timezone": {
+          "label": "Fuseau horaire",
+          "value": "Heure d'Europe de l'Est (EET, UTC+2). Heure d'été : EEST (UTC+3)."
+        },
+        "climate": {
+          "label": "Climat en mai",
+          "value": "Chaud et agréable, 18–25°C. Des vêtements légers et des chaussures confortables sont recommandés."
+        }
+      }
+    },
+    "gettingThere": {
+      "badge": "Comment s'y rendre",
+      "title": "Comment rejoindre Chișinău",
+      "airport": {
+        "name": "Aéroport international de Chișinău",
+        "distance": "~15 km du centre-ville",
+        "description": "L'aéroport international de Chișinău (KIV) offre des connexions directes avec les grandes villes européennes, notamment Bucarest, Istanbul, Vienne, Francfort, Rome et Paris."
+      },
+      "transport": {
+        "taxi": {
+          "label": "Taxi",
+          "detail": "~20 min, 150–300 MDL (~8–15 €)"
+        },
+        "bus": {
+          "label": "Bus aéroport",
+          "detail": "~30 min, 6 MDL (~0,30 €)"
+        },
+        "transfer": {
+          "label": "Transfert hôtel",
+          "detail": "Pré-arrangé"
+        }
+      },
+      "mapPlaceholder": "Carte interactive bientôt disponible"
+    },
+    "practical": {
+      "badge": "Bon à savoir",
+      "title": "Informations pratiques",
+      "subtitle": "Détails essentiels pour les délégués visitant Chișinău.",
+      "items": {
+        "visa": {
+          "title": "Informations sur les visas",
+          "description": "Les ressortissants des États membres et observateurs du Conseil de l'Europe peuvent entrer en Moldova sans visa pour des séjours de 90 jours maximum. Un passeport valide est requis."
+        },
+        "electricity": {
+          "title": "Électricité",
+          "description": "Prises de type C et F, 230V / 50Hz — identiques à la plupart des pays européens. Aucun adaptateur nécessaire pour les délégués de l'UE."
+        },
+        "emergency": {
+          "title": "Numéros d'urgence",
+          "description": "112 — Urgence générale. 902 — Ambulance. 901 — Pompiers. 903 — Police."
+        },
+        "internet": {
+          "title": "Connectivité",
+          "description": "Le Wi-Fi gratuit est largement disponible dans les hôtels, restaurants et espaces publics. Des cartes SIM locales avec données peuvent être achetées à l'aéroport."
+        }
+      }
+    },
+    "whatToSee": {
+      "badge": "À voir",
+      "title": "Découvrir et explorer",
+      "subtitle": "Des parcs verdoyants de Chișinău aux cités souterraines du vin — la Moldova a plus à offrir que vous ne le pensez.",
+      "attractions": {
+        "stefan": {
+          "title": "Parc Ștefan cel Mare",
+          "description": "Le cœur de Chișinău — un magnifique parc central nommé d'après le plus grand souverain médiéval de Moldavie, entouré de monuments et de la cathédrale emblématique."
+        },
+        "triumphal": {
+          "title": "Arc de Triomphe et Cathédrale",
+          "description": "L'Arc de Triomphe de Chișinău, construit en 1840, se dresse devant la magnifique Cathédrale de la Nativité sur la place centrale."
+        },
+        "cricova": {
+          "title": "Cave Cricova",
+          "description": "Une cité souterraine du vin s'étendant sur 120 km de tunnels, abritant l'une des plus grandes collections de vins au monde — y compris des bouteilles de la collection confisquée d'Hermann Göring."
+        },
+        "orheiul": {
+          "title": "Orheiul Vechi",
+          "description": "Un spectaculaire complexe archéologique en plein air creusé dans les falaises calcaires, avec un monastère troglodyte médiéval — inscrit sur la liste indicative de l'UNESCO."
+        }
+      }
+    },
+    "cuisine": {
+      "badge": "Goûtez la Moldova",
+      "title": "Cuisine moldave",
+      "subtitle": "Une riche tradition culinaire façonnée par des siècles de carrefour culturel — copieuse, savoureuse et à déguster avec du vin local.",
+      "dishes": {
+        "mamaliga": {
+          "title": "Mămăligă",
+          "description": "Polenta traditionnelle de semoule de maïs, plat national de la Moldova — servie avec de la crème sure, du fromage et des ragoûts."
+        },
+        "placinte": {
+          "title": "Plăcinte",
+          "description": "Pâtisseries fines farcies au fromage, aux pommes de terre, au chou ou aux cerises — un street food adoré et un incontournable des foyers."
+        },
+        "wine": {
+          "title": "Vin moldave",
+          "description": "L'une des plus anciennes régions viticoles au monde. Essayez le Fetească Neagră, le cépage rouge autochtone emblématique."
+        },
+        "zeama": {
+          "title": "Zeamă",
+          "description": "Un bouillon de poulet léger et aromatique avec des nouilles maison et de la livèche — considéré comme l'âme de la cuisine réconfortante moldave."
+        },
+        "sarmale": {
+          "title": "Sarmale",
+          "description": "Feuilles de chou farcies d'un mélange savoureux de viande hachée, de riz et d'herbes — un plat de fête servi à chaque célébration."
+        },
+        "coltunasi": {
+          "title": "Colțunași",
+          "description": "Raviolis traditionnels moldaves farcis au fromage blanc, aux pommes de terre ou aux cerises — servis avec de la crème sure et une touche de nostalgie."
+        }
+      }
+    }
+  }
+}
