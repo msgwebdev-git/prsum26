@@ -15,7 +15,7 @@ const onest = Onest({
   weight: ["100", "400", "500", "700"],
 });
 
-const SITE_URL = "https://presidency.md";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://prsum26.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
